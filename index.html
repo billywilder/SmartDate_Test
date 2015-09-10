@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<meta charset="UTF-8">
+<head>
+    <script src="javascripts/SmartDate.js"></script>
+    <link href="stylesheets/bootstrap.css" rel="stylesheet" />
+    <link href="stylesheets/bootstrap-theme.css" rel="stylesheet" />
+    <script>
+
+    var a = new Date();
+    document.write('Создаем новый объект класса Date()<br/>');
+    document.write('var a = new Date();<br/><br/>');
+    document.write('Выводим его на экран<br/>');
+    document.write('document.write(a);<br/><br/>');
+    document.write(a+'<br/><br/>');
+    document.write('---------------------------------------------------<br/><br/>');
+    
+    var b = new SmartDate(a);
+    document.write('Создаем новый объект класса SmartDate()<br/>');
+    document.write('var b = new SmartDate(a);<br/><br/>');
+    document.write('Выводим его на экран<br/>');
+    document.write('document.write(b);<br/><br/>');
+    document.write(b+'<br/><br/>');
+    document.write('---------------------------------------------------<br/><br/>');
+    
+    b.add(7,'d');
+    document.write('Прибавляем 7 дней к объекту b класса SmartDate()<br/>');
+    document.write('b.add(7,\'d\');<br/><br/>');
+    document.write('Выводим результат на экран<br/>');
+    document.write('document.write(b);<br/><br/>');
+    document.write(b+'<br/><br/>');
+    document.write('---------------------------------------------------<br/><br/>');
+    
+    b.substract(10,'h');
+    document.write('Отнимаем 10 часов от объекта b класса SmartDate()<br/>');
+    document.write('b.substract(10,\'h\');<br/><br/>');
+    document.write('Выводим результат на экран<br/>');
+    document.write('document.write(b);<br/><br/>');
+    document.write(b+'<br/><br/>');
+    document.write('---------------------------------------------------<br/><br/>');
+    
+    b.substract(a);
+    document.write('Вычитаем из обекта b объект a<br/>');
+    document.write('b.substract(a);<br/><br/>');
+    document.write('Возвращаем объект класса Date(), используя метод toDate() класса SmartDate(), и получаем разницу между датами в миллисекундах.Выводим результат на экран.<br/>');
+    document.write('document.write(b.toDate().getTime());<br/><br/>');
+    document.write(b.toDate().getTime()+'<br/><br/>');
+
+    for (var i = 0; i < 10; i++) { 
+    	
+  (function() {var cc = i; setTimeout(function () { 
+    console.log(cc); 
+  }, cc*1000)}()); 
+}
+
+    </script>
+</head>
+<body class="well">
+</body>
+</html>
