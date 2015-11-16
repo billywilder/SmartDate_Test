@@ -3,6 +3,7 @@
 function SmartDate(dateObject) {
   this.baseDate = new Date(dateObject.getTime());
 }
+
 //Добавляем в класс SmartDate() метод add()
 SmartDate.prototype.add = function(number, type) {
   switch (type) {
